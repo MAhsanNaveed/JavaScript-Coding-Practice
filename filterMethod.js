@@ -108,3 +108,29 @@ function isPrime(number){
     return true;
 }
 
+_________ Q.No#07
+
+//------   filter out the unique character in the string by using filter method
+
+function uniqueChar(inputString){
+    const outputChar=inputString.toLowerCase().split("").filter((char, index, array)=> array.indexOf(char)===index);
+    // it will first convert the string into lowercase to make it case nsensitive
+    // then it split the string characters into the array of characters
+    // finally it will return the character having only one occurence
+    return outputChar;
+}
+
+console.log(uniqueChar("Muhammad Ahsan Naveed"));//  output ['m', 'u', 'h', 'a', 'd', ' ', 's', 'n', 'v', 'e']
+
+
+// _________ Q.No#08
+
+//------   filter the array on the based of substring
+
+function fiterStr(input, searchStr){
+    const outputArray= input.filter(element => element.includes(searchStr));
+    return outputArray;
+}
+console.log(fiterStr(["apple", "banana", "cherry", "grape"],"ap"));//['apple', 'grape']
+
+
