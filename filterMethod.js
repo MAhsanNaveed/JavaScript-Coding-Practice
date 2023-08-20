@@ -20,4 +20,13 @@ function evenNumbrs(inputArray){
 
 console.log(evenNumbrs([0,1,3,4,2,5,6,7,9]))//  output  [0, 4, 2, 6]
 
+// _________ Q.No#03
 
+//------   filter strings longer than a user given length:
+
+function specificLenght(inputArray,userLength){
+    const filteredArray= inputArray.filter(element => element.length >= userLength);
+    //  it will check the length of each element and if it is greater or equal to specified value than it will return the current element
+    return filteredArray;
+}
+console.log(specificLenght(['apple','banana','kiwi','watermellon','mangoes','grapes'],6));// output ['banana', 'watermellon', 'mangoes', 'grapes']
