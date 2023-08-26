@@ -13,9 +13,9 @@
 
 function evenNumbrs(inputArray){
 
-    const evenNum=inputArray.filter(element => element%2===0);
+    return inputArray.filter(element => element%2===0);
     // it will return the current element if it is even otherwise nothing will return
-    return evenNum;
+   
 }
 
 console.log(evenNumbrs([0,1,3,4,2,5,6,7,9]))//  output  [0, 4, 2, 6]
@@ -25,9 +25,8 @@ console.log(evenNumbrs([0,1,3,4,2,5,6,7,9]))//  output  [0, 4, 2, 6]
 //------   filter strings longer than a user given length:
 
 function specificLenght(inputArray,userLength){
-    const filteredArray= inputArray.filter(element => element.length >= userLength);
+    return inputArray.filter(element => element.length >= userLength);
     //  it will check the length of each element and if it is greater or equal to specified value than it will return the current element
-    return filteredArray;
 }
 console.log(specificLenght(['apple','banana','kiwi','watermellon','mangoes','grapes'],6));// output ['banana', 'watermellon', 'mangoes', 'grapes']
 
@@ -56,9 +55,7 @@ const students=[
 
 function filterData(inputObject, inputScore){
     
-    const filteredObject= inputObject.filter(element => element.score >= inputScore);
-    
-    return filteredObject;
+    return inputObject.filter(element => element.score >= inputScore);
 }
 console.log(filterData(students,90));
 
