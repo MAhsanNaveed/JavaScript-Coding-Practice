@@ -21,9 +21,22 @@ Q1. Write a function to calculate the sum of all elements in an array using redu
  console.log(frequency(arr,5))
 
 // Q4. Write a function to concatenate all elements of an array into a single string using reduce().
- 
+let arr=[1,2,3,4,2,4,2,4,3,3,5,6,4,5,1,5,6]
 
-
-
+function concateElement(inputArray){
+  return inputArray.reduce((acc,element)=>acc+=element,"");
+}
+console.log(concateElement(arr));
 
 // Q5. Write a function to create a new array that contains only the unique elements from the original array using reduce().
+
+let arr=[1,2,3,4,2,4,2,4,3,3,5,6,4,5,1,5,6]
+function uniqueElements(inputArray){
+  return inputArray.reduce((acc,value,index,self)=>{
+    if(self.indexOf(value)===index){
+      acc.push(value);
+    }
+    return acc;
+  },[]);
+}
+console.log(uniqueElements(arr));
