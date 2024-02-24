@@ -79,3 +79,12 @@ function indexOfLargetNumber(inputArray){
 }
 console.log(indexOfLargetNumber(arr));
 
+//     Q.No#10   find the peaks of the array by usins reduce method
+const array=[4, 5, 2, 1, 4, 9, 7, 2];
+const result= array.filter((accamulator,value,index,givenArray)=>{
+    if(value > givenArray[index-1] && value > givenArray[index+1]){
+        accamulator.push(value);
+    }
+},[]);
+console.log(result);
+
