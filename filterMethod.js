@@ -130,4 +130,13 @@ function fiterStr(input, searchStr){
 }
 console.log(fiterStr(["apple", "banana", "cherry", "grape"],"ap"));//['apple', 'grape']
 
-
+//     Q.No#09 
+///       Find the miniPeaks of the array
+//
+const array=[4, 5, 2, 1, 4, 9, 7, 2];
+const result= array.filter((value,index,givenArray)=>{
+    if(value > givenArray[index-1] && value > givenArray[index+1]){
+        return value;
+    }
+});
+console.log(result);////  result is  [5,9]
